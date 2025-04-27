@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-Learning Platform - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">LearnOnline</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="course.html">Courses</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome to LearnOnline</h2>
+      <p>Learn new skills, anytime, anywhere!</p>
+    </div>
+  </section>
+
+  <!-- Course Listing Section -->
+  <section class="courses">
+    <div class="container">
+      <h2>Available Courses</h2>
+
+      <div class="course-grid">
+        <!-- Single Course Card -->
+        <div class="course-card">
+          <h3>Web Development Basics</h3>
+          <p>Learn the fundamentals of HTML, CSS, and JavaScript.</p>
+          <a href="course.html" class="btn">View Course</a>
+        </div>
+
+        <!-- Another Course Card -->
+        <div class="course-card">
+          <h3>Python for Beginners</h3>
+          <p>Start your programming journey with Python!</p>
+          <a href="course.html" class="btn">View Course</a>
+        </div>
+
+        <!-- Another Course Card -->
+        <div class="course-card">
+          <h3>Machine Learning 101</h3>
+          <p>Introduction to AI, ML algorithms, and data science.</p>
+          <a href="course.html" class="btn">View Course</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 LearnOnline. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+________________________________________
+🎥 course.html (Course Details Page with Video and Progress Tracking)
+html
+CopyEdit
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course - Web Development Basics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">LearnOnline</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="course.html">Courses</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Course Details Section -->
+  <section class="course-details">
+    <div class="container">
+      <h2>Web Development Basics</h2>
+
+      <!-- Embedded Course Video -->
+      <div class="video-wrapper">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/dD2EISBDjWM" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress">
+        <label>Progress:</label>
+        <progress value="40" max="100"></progress>
+        <span>40% Complete</span>
+      </div>
+
+      <!-- Course Description -->
+      <p class="course-desc">
+        This course covers the basics of web development including HTML, CSS, and JavaScript. Build your first website today!
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 LearnOnline. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+________________________________________
+🎨 style.css (Common CSS Styling with Comments)
+css
+CopyEdit
+/* Basic Reset for All Elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+/* Container Class to Center Content */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #4CAF50;
+  padding: 1rem 0;
+}
+
+.logo {
+  color: white;
+  float: left;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  float: right;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Clearfix for Navbar */
+.navbar::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* Hero Section Styles */
+.hero {
+  background: url('https://images.unsplash.com/photo-1521790361153-3c93a1d46bfa?fit=crop&w=1200&q=80') no-repeat center center/cover;
+  height: 400px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+/* Courses Section */
+.courses {
+  padding: 60px 0;
+  background: #f4f4f4;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.course-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.course-card:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Course Details Section */
+.course-details {
+  padding: 60px 0;
+}
+
+.video-wrapper {
+  margin: 20px 0;
+}
+
+.progress {
+  margin: 20px 0;
+}
+
+.progress label {
+  font-weight: bold;
+}
+
+/* Course Description */
+.course-desc {
+  margin-top: 20px;
+}
+
+/* Footer Styling */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    display: block;
+    margin: 10px 0;
+  }
+}
