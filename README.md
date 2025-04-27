@@ -19,3 +19,4 @@ To design the front-end for an E-learning platform with course listing, progress
 
 OUTPUT
 
+![Image](https://github.com/user-attachments/assets/57a71697-e42c-4fe1-9018-75aa5d8c2f28)
